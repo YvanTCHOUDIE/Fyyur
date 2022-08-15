@@ -17,7 +17,7 @@ This app which was not complete has been completed by Yvan TCHOUDIE DJOMESSI in 
 
 Once deployed on a computer, ensure to run a virutal environment for the app to reference the local dependencies.
 
-  ##On Lunux, run
+  ##On Linux, run
     source env/bin/activate           #from terminal
   ##In Windows, rather run
     source env/Scripts/activate       #from git bash
