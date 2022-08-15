@@ -15,6 +15,16 @@ Your job is to build out the data models to power the API endpoints for the Fyyu
 
 This app which was not complete has been completed by Yvan TCHOUDIE DJOMESSI in the scope of the Nanodegree program Real data manipulation effectiveness has been developped through Model folloaing best practices of SQLAlchemy ORM and FLASK Migrate. This is based on postgresql, assuming the database fyyur is created in the user postgres with password postgres.
 
+Once deployed on a computer, ensure to run a virutal environment for the app to reference the local dependencies.
+
+  ##On Lunux, run
+    source env/bin/activate           #from terminal
+  ##In Windows, rather run
+    source env/Scripts/activate       #from git bash
+
+#In case virtual environment is not installed, do please install by running the following command
+    python -m virtualenv env
+
 ##
 
 We want Fyyur to be the next new platform that artists and musical venues can use to find each other, and discover new music shows. Let's make that happen!

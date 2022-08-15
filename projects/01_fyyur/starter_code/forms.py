@@ -96,21 +96,27 @@ def is_valid_phone(number):
     regex = re.compile('^\(?([0-9]{2}|[0-9]{3})\)?[-. ]?([0-9]{2}|[0-9]{3})[-. ]?([0-9]{2}|[0-9]{3})[-. ]?([0-9]{2}|[0-9]{3})$')
     return regex.match(number)
 
-
+#Defining validor for form
 def validate(self):
     rv = FlaskForm.validate(self)
+    #checking if the built-in validate function validated the status
     if not rv:
         return False
+    
+    #REaching here means the first validation was ok. Now checking the phone
     if not is_valid_phone(self.phone.data):
         self.phone.errors.append('Invalid phone.')
         return False
+    #REaching here means the previous validation were ok. Now checking the genres
     if not set(self.genres.data).issubset(dict(Genre.choices()).keys()):
         self.genres.errors.append('Invalid genres.')
         return False
+    #REaching here means the previous validation were ok. Now checking the state
     if self.state.data not in dict(State.choices()).keys():
         self.state.errors.append('Invalid state.')
         return False
-        # if pass validation
+    
+    #Reaching here means the previous validation were ok. We can then return TRUE
     return True
 
 
@@ -150,6 +156,8 @@ class VenueForm(Form):
     )
     genres = SelectMultipleField(
         # TODO implement enum restriction
+        #choices=genres_list
+        #CONSIDERING CLASSIC VALIDATOR
         'genres', 
         validators=[DataRequired()],
         #choices=genres_list
@@ -190,6 +198,7 @@ class ArtistForm(Form):
     )
     phone = StringField(
         # TODO implement validation logic for phone 
+        # Considering the CLASSIC VALIDATOR
         'phone',
         validators=[DataRequired()],
     )
@@ -206,6 +215,7 @@ class ArtistForm(Form):
      )
     facebook_link = StringField(
         # TODO implement enum restriction
+        # Considering the classic validator
         'facebook_link', validators=[URL()]
      )
 
