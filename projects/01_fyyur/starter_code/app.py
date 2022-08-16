@@ -25,15 +25,20 @@ import os
 # App Config.
 #----------------------------------------------------------------------------#
 
-app = Flask(__name__)
-moment = Moment(app)
-app.config.from_object('config')
-db = SQLAlchemy(app)
+# [Yvan TCHOUDIE DJOMESSI] - app and db initialization have been refactored to the models.py
+
+#app = Flask(__name__)
+#moment = Moment(app)
+#app.config.from_object('config')
+#db = SQLAlchemy(app)
 
 # TODO: connect to a local postgresql database
-# [Yvan TCHOUDIE DJOMESSI] - DONE- Also added __table_args__ = {'quote': []} to avoid table with quote in the DB, which lead issues
 
-migrate = Migrate(app, db)
+# [Yvan TCHOUDIE DJOMESSI] - DONE- Connection to local database done in the models.py file
+# This is not done again here to avoid duplicates and avoid issues
+
+
+#migrate = Migrate(app, db)
 
 #----------------------------------------------------------------------------#
 # Models.

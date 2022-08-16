@@ -207,3 +207,15 @@ Navigate to project homepage [http://127.0.0.1:5000/](http://127.0.0.1:5000/) or
 TEST Have been DONE, and the results are in the folder DEMO_20220813
 
 At the end of the tests, a dump of the DB has also been DONE. the dump .sql file is in the same folder DEMO_20220813
+
+In summary
+
+1) python -m virtualenv env
+2) source env/bin/activate 	(On Windows)
+2) source env/Scripts/activate  (On Linux)
+3) export FLASK_APP=app
+4) python app.py
+
+5) drop the database fyuur and recreate the database
+
+Link for the demo:  https://www.youtube.com/watch?v=z5xMcU4EJRA
