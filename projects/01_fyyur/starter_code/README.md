@@ -210,12 +210,11 @@ At the end of the tests, a dump of the DB has also been DONE. the dump .sql file
 
 In summary
 
+0) drop the database fyuur and recreate the database
 1) python -m virtualenv env
 2) source env/bin/activate 	(On Windows)
 2) source env/Scripts/activate  (On Linux)
 3) export FLASK_APP=app
 4) python app.py
-
-5) drop the database fyuur and recreate the database
 
 Link for the demo:  https://www.youtube.com/watch?v=z5xMcU4EJRA
